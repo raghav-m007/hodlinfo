@@ -1,0 +1,52 @@
+<!-- EJS-Lint: -->
+<%-include('navbar')-%>
+
+
+
+
+    <div class="container my-4 ">
+        <div class="row text-center">
+            <div class="col-md-1">
+                <span>#</span>
+            </div>
+            <div class="col-md-1">
+                <span>Name</span>
+            </div>
+            <div class="col-md-2">
+                <span>Last</span>
+            </div>
+            <div class="col-md-2">
+                <span>Buy</span>
+            </div>
+            <div class="col-md-2">
+                <span>Sell</span>
+            </div>
+            <div class="col-md-1">
+                <span>Volume</span>
+            </div>
+        </div>
+                <% mydata.map((data, index)=>{ %>
+                    
+            <div class="row text-center my-2 ">
+                <div class="col-md-1 grey ">
+                    <p><%=index+1%></p>
+                </div>
+                <div class="col-md-1 grey">
+                    <p><%=data.name%></p>
+                </div>
+                <div class="col-md-2 grey">
+                    <p><%=data.last%></p>
+                </div>
+                <div class="col-md-2 grey">
+                    <p><%=data.buy%></p>
+                </div>
+                <div class="col-md-2 grey">
+                    <p><%=data.sell%></p>
+                </div>
+                <div class="col-md-1 grey">
+                    <p><%=data.volume%></p>
+                </div>
+            </div>
+       <% }) %>
+
+    </div>
